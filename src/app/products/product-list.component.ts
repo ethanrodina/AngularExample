@@ -11,7 +11,7 @@ export class ProductListComponent {
     imageWidth:number = 50;
     imageMargin:number = 4;
     showImage:boolean = true;
-    _listFilter:string = "";
+    _listFilter:string;
     filterProduct:IProduct[];
     products:IProduct[] = [
         {
@@ -86,5 +86,9 @@ export class ProductListComponent {
           filterBy = filterBy.toLowerCase();
           return this.products.filter((product:IProduct)=>
           product.productName.toLowerCase().indexOf(filterBy) !== -1)
+      }
+
+      onRatingClicked(message:string) : void {
+        this.pageTitle = message
       }
 }
