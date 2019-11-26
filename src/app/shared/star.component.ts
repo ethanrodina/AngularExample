@@ -12,7 +12,7 @@ export class StarComponent implements OnChanges{
     starWidth: number;
 
     ngOnChanges() : void {
-        this.starWidth = this.rating * 18
+        this.starWidth = this.rating * 19
     }
 
     onClick() : void {
